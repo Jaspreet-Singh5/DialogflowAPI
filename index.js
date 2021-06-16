@@ -112,9 +112,8 @@ app.get('/', (req, res) => {
 })
 
 
-/**
-* now listing the server on port number 3000 :)
-* */
-app.listen(80, () => {
-    console.log("Server is Running on port 80")
-})
+const PORT = process.env.PORT || 80;
+
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
+});
